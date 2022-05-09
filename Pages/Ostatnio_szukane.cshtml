@@ -1,0 +1,17 @@
+﻿@page
+@model uwierzytelnianie.Pages.Ostatnio_szukaneModel
+@{
+    ViewData["Title"] = "Ostatnio szukane";
+}
+
+<h3> Baza danych: </h3>
+@foreach (var item in Model.Fizzbuzzes)
+{
+<p>
+    @Html.DisplayFor(modelItem => item.Name)
+    @Html.DisplayFor(modelItem => item.LastName)
+    @Html.DisplayFor(modelItem => item.Wynik)
+    @Html.DisplayFor(modelItem => item.Number)
+    @Html.DisplayFor(modelItem => item.Data)
+</p>
+}

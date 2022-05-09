@@ -1,0 +1,18 @@
+﻿@page
+@model uwierzytelnianie.Pages.Wszystkie_szukaneModel
+@{
+    ViewData["Title"] = "Wszystkie szukane";
+}
+
+<h3> Baza danych: </h3>
+@foreach (var item in Model.Fizzbuzzes)
+{
+<p>
+    @Html.DisplayFor(modelItem => item.Name)
+    @Html.DisplayFor(modelItem => item.LastName)
+    @Html.DisplayFor(modelItem => item.Wynik)
+    @Html.DisplayFor(modelItem => item.Number)
+    @Html.DisplayFor(modelItem => item.Data)
+    @Html.DisplayFor(modelItem => item.UserMail)
+</p>
+}
